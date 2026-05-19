@@ -13,7 +13,6 @@ export default function PipelinePage() {
   useEffect(() => {
     const unsub = auth.onAuthStateChanged((u) => {
       if (u) {
-        setUser(u.uid);
         initialize(workspaceId);
         refreshStats(workspaceId);
       }
